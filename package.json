@@ -1,5 +1,5 @@
 {
-  "name": "serino_bootcamp_typescript",
+  "name": "serino-bootcamp-typescript",
   "version": "1.0.0",
   "description": "My react typescript project for bootcamp",
   "main": "./dist/cjs/index.js",
@@ -52,6 +52,6 @@
   "keywords": [
     "react",
     "typescript",
-    "serino_bootcamp_typescript"
+    "serino-bootcamp-typescript"
   ]
 }

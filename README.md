@@ -1,1 +1,1 @@
-# my-react-typescript-package
+# serino-bootcamp-typescript
