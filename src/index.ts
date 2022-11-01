@@ -1,3 +1,3 @@
-import MyCounter from './components/App'
+import CartList from './presentation/views/cart/CartList'
 
-export { MyCounter }
+export { CartList }
