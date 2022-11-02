@@ -1,6 +1,6 @@
 # Serino Shopping Cart Mni App
 
-- Serino Shopping Cart ( v1.0.8 )
+- Serino Shopping Cart ( v1.0.11 )
 
 ![Mini App Shopping Cart](https://github.com/kkbjjtllavora/serino-bootcamp-typescript/blob/HEAD/images/mini-app-ss.JPG?raw=true)
 
@@ -15,17 +15,31 @@ npm install serino-bootcamp-typescript
 ## Usage
 
 ```sh
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CartList } from 'serino-bootcamp-typescript'
 import axios, { AxiosResponse } from 'axios'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function CartListPage() {
+  const [errorMessage, setErrorMessage] = useState<string>('')
+
   const cartListPromise: Promise<AxiosResponse<any, any>> = axios.get('https://jsonplaceholder.typicode.com/todos')
+
+  useEffect(() => {
+    errorMessage && toast(errorMessage)
+  }, [errorMessage])
 
   return (
     <div>
+      <ToastContainer />
+
       <h2>Shopping Cart</h2>
-      <CartList dataIn={{ buttonTitle: 'Hello' }} dataLoad={{ cartList: cartListPromise }} />
+      <CartList
+        dataIn={{ buttonTitle: 'Click Me' }}
+        dataLoad={{ cartList: cartListPromise }}
+        dataOut={{ errorMessage: setErrorMessage }}
+      />
     </div>
   )
 }

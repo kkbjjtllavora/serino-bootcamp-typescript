@@ -1,6 +1,6 @@
 {
   "name": "serino-bootcamp-typescript",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "My react typescript project for bootcamp",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
