@@ -1,6 +1,10 @@
 # Serino Shopping Cart Mni App
 
-- Serino Shopping Cart ( v1.0.7 )
+- Serino Shopping Cart ( v1.0.8 )
+
+![Mini App Shopping Cart](./images/mini-app-ss.JPG)
+
+Serino shopping cart allows you to add a shopping cart list to your app with ease. This is easy to setup, you can install it in less than 10sec.
 
 ## Installation
 
@@ -42,7 +46,9 @@ export default function CartListPage() {
 ## Changelogs
 
 ```sh
-- v1.0.7 - Update README.md file. Add definitions.
+- v1.0.9 - Update README by adding node version
+- v1.0.8 - Add dataOut parameter
+- v1.0.7 - Update README.md file. Add definitions
 - v1.0.6 - Tested axios call on the example folder
 - v1.0.5 - Removed axios call inside the miniapp
 - v1.0.4 - Change file name and folders according to convention
@@ -55,4 +61,10 @@ export default function CartListPage() {
 
 ```sh
 "react": ">=16"
+```
+
+## Node Version
+
+```sh
+v14.15.1
 ```
