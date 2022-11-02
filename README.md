@@ -2,7 +2,7 @@
 
 - Serino Shopping Cart ( v1.0.8 )
 
-![Mini App Shopping Cart](./images/mini-app-ss.JPG)
+![Mini App Shopping Cart](https://github.com/kkbjjtllavora/serino-bootcamp-typescript/blob/HEAD/images/mini-app-ss.JPG?raw=true)
 
 Serino shopping cart allows you to add a shopping cart list to your app with ease. This is easy to setup, you can install it in less than 10sec.
 
@@ -46,6 +46,7 @@ export default function CartListPage() {
 ## Changelogs
 
 ```sh
+- v1.0.10 - Update image on npm
 - v1.0.9 - Update README by adding node version
 - v1.0.8 - Add dataOut parameter
 - v1.0.7 - Update README.md file. Add definitions
