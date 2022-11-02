@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
-import useCartListModel from '../../models/CartListModel'
+import useCartListModel from '../../../models/useCartListModel'
 import List from '../../components/List'
 import Button from '../../components/Button'
-import { CartDataLoad, CartDataIn } from '../../types/cart'
+import { CartDataLoad, CartDataIn } from '../../../types/cart'
 
-export type Props = {
+export type TCartListProps = {
   dataLoad: CartDataLoad
   dataIn: CartDataIn
 }
 
-export default function CartList({ dataLoad, dataIn }: Props) {
-  const { cartList, getCartList, isLoading } = useCartListModel({ dataLoad })
+export default function CartList({ dataLoad, dataIn }: TCartListProps) {
+  const { cartList, getCartList, isLoading } = useCartListModel(dataLoad)
 
   useEffect(() => {
     getCartList()

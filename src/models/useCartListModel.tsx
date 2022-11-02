@@ -1,29 +1,25 @@
 import { useState } from 'react'
-import axios from 'axios'
 import { CartDataLoad } from '../types/cart'
+import { AxiosResponse } from 'axios'
 
-export type Props = {
-  dataLoad: CartDataLoad
-}
-
-export default function CartListModel({ dataLoad }: Props) {
+export default function CartListModel(dataLoad: CartDataLoad) {
   const [cartList, setCartList] = useState<[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string>('')
 
   async function getCartList() {
     setIsLoading(true)
-    await axios
-      .get(`${dataLoad.baseUrl}/${dataLoad.endpoint}`)
-      .then((response) => {
+    await dataLoad.cartList
+      .then((response: AxiosResponse) => {
         setCartList(response.data)
         setIsLoading(false)
       })
-      .catch((error) => {
-        setIsLoading(false)
+      .catch((error: { message: string }) => {
         setError(error.message)
+        setIsLoading(false)
       })
   }
+
   return {
     isLoading,
     getCartList,
