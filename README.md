@@ -81,7 +81,8 @@ export default function CartListPage() {
 ## Changelogs
 
 ```sh
-- v1.15.0 - Used material UI and update README
+- v1.17.0 - Update image
+- v1.16.0 - Used material UI and update README
 - v1.15.0 - Transfer styling to mini-app repo
 - v1.14.0 - Update mini app image on readme
 - v1.13.0 - Add list titles
