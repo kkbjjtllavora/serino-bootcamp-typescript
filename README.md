@@ -2,7 +2,7 @@
 
 - Serino Shopping Cart ( v1.0.11 )
 
-![Mini App Shopping Cart](https://github.com/kkbjjtllavora/serino-bootcamp-typescript/blob/HEAD/images/mini-app-ss.JPG?raw=true)
+![Mini App Shopping Cart](https://github.com/kkbjjtllavora/serino-bootcamp-typescript/blob/master/images/mini-app-ss-a.JPG?raw=true)
 
 Serino shopping cart allows you to add a shopping cart list to your app with ease. This is easy to setup, you can install it in less than 10sec.
 
