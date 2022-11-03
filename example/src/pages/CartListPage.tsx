@@ -22,6 +22,8 @@ export default function CartListPage() {
       }
     ]
   */
+  // Create data.json file on your public folder and copy the content above.
+  // Or you can use any api with this shape and call it with axios.
   const cartListPromise: Promise<AxiosResponse<any, any>> = axios.get('./data.json')
 
   useEffect(() => {

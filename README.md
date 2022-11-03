@@ -1,8 +1,8 @@
 # Serino Shopping Cart Mni App
 
-- Serino Shopping Cart ( v1.11.0 )
+- Serino Shopping Cart ( v1.16.0 )
 
-![Mini App Shopping Cart](https://github.com/kkbjjtllavora/serino-bootcamp-typescript/blob/master/images/mini-app-ss-a.JPG?raw=true)
+![Mini App Shopping Cart](https://github.com/kkbjjtllavora/serino-bootcamp-typescript/blob/master/images/mini-app-ss-b.JPG?raw=true)
 
 Serino shopping cart allows you to add a shopping cart list to your app with ease. This is easy to setup, you can install it in less than 10sec.
 
@@ -39,6 +39,8 @@ export default function CartListPage() {
       }
     ]
   */
+  // Create data.json file on your public folder and copy the content above.
+  // Or you can use any api with this shape and call it with axios.
   const cartListPromise: Promise<AxiosResponse<any, any>> = axios.get('./data.json')
 
   useEffect(() => {
@@ -79,21 +81,17 @@ export default function CartListPage() {
 ## Changelogs
 
 ```sh
-- v1.11.0 - Transfer styling to mini-app repo
-- v1.10.0 - Update mini app image on readme
-- v1.9.0 - Add list titles
-- v1.8.0 - Transfer price and quantity to the left of the name
-- v1.7.0 - Update the button on the list
-- v1.6.0 - Update the whole UI
-- v1.5.0 - Remove inline styling
-- v1.4.0 - Remove styling
-- v1.3.0 - Adjust the import of the css
-- v1.2.0 - Add css styling on the list
-- v1.1.1 - Remove button
-- v1.1.0 - Add new parameters on list
-- v1.0.10 - Update image on npm
-- v1.0.9 - Update README by adding node version
-- v1.0.8 - Add dataOut parameter
+- v1.15.0 - Used material UI and update README
+- v1.15.0 - Transfer styling to mini-app repo
+- v1.14.0 - Update mini app image on readme
+- v1.13.0 - Add list titles
+- v1.12.0 - Transfer price and quantity to the left of the name
+- v1.11.0 - Update the button on the list
+- v1.10.0 - Update the whole UI
+- v1.9.0 - Remove inline styling
+- v1.8.0 - Remove styling
+- v1.7.0 - Adjust the import of the css
+- v1.6.0 - Add css styling on the list
 .....
 .....
 ```
