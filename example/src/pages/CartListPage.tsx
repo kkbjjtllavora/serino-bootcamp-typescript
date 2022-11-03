@@ -3,11 +3,12 @@ import { CartList } from 'serino-bootcamp-typescript'
 import axios, { AxiosResponse } from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import './style.css'
 
 export default function CartListPage() {
   const [errorMessage, setErrorMessage] = useState<string>('')
 
-  const cartListPromise: Promise<AxiosResponse<any, any>> = axios.get('https://jsonplaceholder.typicode.com/todos')
+  const cartListPromise: Promise<AxiosResponse<any, any>> = axios.get('./data.json')
 
   useEffect(() => {
     errorMessage && toast(errorMessage)
@@ -17,9 +18,8 @@ export default function CartListPage() {
     <div>
       <ToastContainer />
 
-      <h2>Shopping Cart</h2>
       <CartList
-        dataIn={{ buttonTitle: 'Click Me' }}
+        dataIn={{ cartTitle: 'Serino Shopping Cart' }}
         dataLoad={{ cartList: cartListPromise }}
         dataOut={{ errorMessage: setErrorMessage }}
       />

@@ -1,3 +1,3 @@
-export type CartDataIn = {
-  buttonTitle: string
+export type TCartDataIn = {
+  cartTitle: string
 }

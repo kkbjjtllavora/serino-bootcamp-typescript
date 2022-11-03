@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { CartDataLoad, CartDataOut } from '../types/cart'
+import { TCartDataLoad, TCartDataOut } from '../types/cart'
 import { AxiosResponse } from 'axios'
 
-export default function CartListModel(dataLoad: CartDataLoad, dataOut: CartDataOut) {
+export default function CartListModel(dataLoad: TCartDataLoad, dataOut: TCartDataOut) {
   const [cartList, setCartList] = useState<[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(false)
 

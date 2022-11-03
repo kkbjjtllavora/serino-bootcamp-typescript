@@ -1,3 +1,3 @@
-export type CartDataOut = {
+export type TCartDataOut = {
   errorMessage: (message: string) => void
 }

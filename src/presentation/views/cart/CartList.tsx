@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import useCartListModel from '../../../models/useCartListModel'
 import List from '../../components/List'
-import Button from '../../components/Button'
-import { CartDataLoad, CartDataIn, CartDataOut } from '../../../types/cart'
+import { TCartDataLoad, TCartDataIn, TCartDataOut } from '../../../types/cart'
 
 export type TCartListProps = {
-  dataLoad: CartDataLoad
-  dataIn: CartDataIn
-  dataOut: CartDataOut
+  dataLoad: TCartDataLoad
+  dataIn: TCartDataIn
+  dataOut: TCartDataOut
 }
 
 export default function CartList({ dataLoad, dataIn, dataOut }: TCartListProps) {
@@ -18,13 +17,17 @@ export default function CartList({ dataLoad, dataIn, dataOut }: TCartListProps) 
   }, [])
 
   return (
-    <div className='page'>
+    <div className='container'>
       <div>
-        <h2>Cart List</h2>
-        <Button title={dataIn.buttonTitle} />
+        <h2>{dataIn.cartTitle}</h2>
+      </div>
+      <div className='inp'>
+        <input type='text' placeholder='e.g. eggs 500g' />
+        <button className='submit'>Submit</button>
       </div>
 
       {isLoading ? <div>Loading...</div> : <List data={cartList} />}
+      <button className='clearAll'>Clear Items</button>
     </div>
   )
 }
