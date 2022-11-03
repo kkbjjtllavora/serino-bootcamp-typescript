@@ -1,6 +1,6 @@
 {
   "name": "serino-bootcamp-typescript",
-  "version": "1.3.3",
+  "version": "1.15.0",
   "description": "My react typescript project for bootcamp",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -54,5 +54,18 @@
     "react",
     "typescript",
     "serino-bootcamp-typescript"
-  ]
+  ],
+  "sideEffects": [
+    "./src/styles/style.css"
+  ],
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.12",
+    "@mui/styled-engine-sc": "^5.10.6",
+    "styled-components": "^5.3.6"
+  }
 }

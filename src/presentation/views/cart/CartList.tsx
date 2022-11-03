@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import useCartListModel from '../../../models/useCartListModel'
 import List from '../../components/List'
 import { TCartDataLoad, TCartDataIn, TCartDataOut } from '../../../types/cart'
+import TableContainer from '@material-ui/core/TableContainer'
+import Paper from '@material-ui/core/Paper'
 
 export type TCartListProps = {
   dataLoad: TCartDataLoad
@@ -17,17 +19,12 @@ export default function CartList({ dataLoad, dataIn, dataOut }: TCartListProps) 
   }, [])
 
   return (
-    <div className='container'>
+    <TableContainer component={Paper}>
       <div>
         <h2>{dataIn.cartTitle}</h2>
       </div>
-      <div className='inp'>
-        <input type='text' placeholder='e.g. eggs 500g' />
-        <button className='submit'>Submit</button>
-      </div>
 
       {isLoading ? <div>Loading...</div> : <List data={cartList} />}
-      <button className='clearAll'>Clear Items</button>
-    </div>
+    </TableContainer>
   )
 }
